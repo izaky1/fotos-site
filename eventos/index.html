@@ -2,16 +2,164 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="1;url=https://isaacssilva.com.br">
-    <title>Isaac Fotos - Redirecionando</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isaac Fotos - Carregando Galeria</title>
+
+    <!-- ======================================================= -->
+    <!-- TROQUE O LINK ABAIXO PARA O LINK DO SEU EVENTO          -->
+    <!-- Exemplo: https://banlek.com/seu-link-aqui               -->
+    <!-- O número 1 é o tempo de espera em segundos             -->
+    <!-- ======================================================= -->
+    <meta http-equiv="refresh" content="1;https://isaacssilva.com.br">
+
     <style>
-        body { background: #111; color: #fff; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: sans-serif; }
+        /* Estilos Globais e Fundo Texturizado */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #1a1a1a; /* Fundo escuro */
+            /* Adicione uma textura sutil de fundo aqui se desejar, como um padrão de concreto ou linho escuro. */
+            /* background-image: url('caminho/para/sua/textura.png'); */
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+        }
+
+        /* Cartão de UI Centralizado */
+        .container {
+            background-color: #2c3e50; /* Cinza-azulado escuro */
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        /* Branding e Logotipo */
+        .logo-container {
+            margin-bottom: 25px;
+        }
+
+        .logo-icon {
+            /* Você pode substituir esta imagem pelo seu logotipo real. */
+            /* Use um ícone de obturador de câmera ou o seu logotipo principal. */
+            background-image: url('https://i.imgur.com/8N4N5R4.png'); /* Exemplo de ícone de obturador */
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 10px auto;
+        }
+
+        h1.logo-text {
+            font-size: 28px;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        h1.logo-text .dot-com-br {
+            font-size: 14px;
+            color: #aaaaaa;
+            display: block;
+            margin-top: -5px;
+        }
+
+        /* Indicador de Carregamento (Spinner) */
+        .loader-container {
+            margin-bottom: 30px;
+        }
+
+        .loader-spinner {
+            border: 5px solid rgba(255, 255, 255, 0.1);
+            border-top: 5px solid #00bcd4; /* Turquesa */
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1.2s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Mensagens de Título e Subtítulo */
+        h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        p.description {
+            color: #bbbbbb;
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 35px;
+        }
+
+        /* Seção de Backup e Botão */
+        .backup-section {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 25px;
+        }
+
+        p.backup-text {
+            color: #aaaaaa;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .manual-button {
+            display: inline-block;
+            background-color: #00bcd4; /* Turquesa */
+            color: #ffffff;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .manual-button:hover {
+            background-color: #008c9e; /* Turquesa mais escuro no hover */
+        }
+
     </style>
 </head>
 <body>
-    <div>
-        <h2>Acessando galeria...</h2>
-        <p>Se não carregar, <a href="https://isaacssilva.com.br" style="color: #00aaff;">clique aqui</a>.</p>
+
+    <div class="container">
+        <!-- Seção de Branding e Logotipo -->
+        <div class="logo-container">
+            <div class="logo-icon"></div>
+            <h1 class="logo-text">ISAAC FOTOS <span class="dot-com-br">isaacfotos.com.br</span></h1>
+        </div>
+        
+        <!-- Seção de Carregamento -->
+        <div class="loader-container">
+            <div class="loader-spinner"></div>
+        </div>
+        
+        <!-- Mensagens de Carregamento -->
+        <h2>Acessando sua Galeria de Eventos</h2>
+        <p class="description">Aguarde um momento enquanto preparamos suas memórias especiais...</p>
+        
+        <!-- Seção de Backup e Botão Manual -->
+        <div class="backup-section">
+            <p class="backup-text">Problemas para carregar?</p>
+            <!-- ======================================================= -->
+            <!-- COLOQUE O MESMO LINK DO EVENTO AQUI NO BOTÃO           -->
+            <!-- ======================================================= -->
+            <a href="https://isaacssilva.com.br" class="manual-button">[ Clique aqui para carregar manualmente ]</a>
+        </div>
     </div>
+
 </body>
 </html>
